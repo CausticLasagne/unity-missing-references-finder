@@ -154,7 +154,10 @@ public class MissingReferencesResultsWindow : EditorWindow
 
         if (SelectedGameObject)
         {
-            MissingReferencesFinder.FindMissingReferences(SelectedGameObject, true, missingComponents, missingReferences);
+		// MissingReferencesFinder.FindMissingReferences does not exist
+		// Closest definition MissingReferencesFinder.findMissingReferences however, this is private
+		// Starting a new fork to use the project without errors.
+        	//MissingReferencesFinder.findMissingReferences(SelectedGameObject, true, missingComponents, missingReferences);
         }
 
         isSearching = false;
